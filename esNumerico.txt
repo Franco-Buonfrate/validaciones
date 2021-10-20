@@ -1,0 +1,17 @@
+ * \brief Verifica si el valor recibido es numérico
+ * \param str Array con la cadena a ser analizada
+ * \return 1 si es númerico y 0 si no lo es
+ *
+ */
+
+int esNumerico(char str[])
+{
+   int i=0;
+   while(str[i] != '\0')
+   {
+       if(str[i] < '0'  str[i] > '9')
+           return 0;
+       i++;
+   }
+   return 1;
+}

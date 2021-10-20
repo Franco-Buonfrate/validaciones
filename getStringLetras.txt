@@ -1,0 +1,17 @@
+/
+ * \brief Solicita un texto al usuario y lo devuelve
+ * \param mensaje Es el mensaje a ser mostrado
+ * \param input Array donde se cargará el texto ingresado
+ * \return 1 si el texto contiene solo letras
+ */
+int getStringLetras(char mensaje[],char input[])
+{
+    char aux[256];
+    getString(mensaje,aux);
+    if(esSoloLetras(aux)&&strlen(aux)<51)
+    {
+        strcpy(input,aux);
+        return 1;
+    }
+    return 0;
+}

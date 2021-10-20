@@ -1,0 +1,28 @@
+/**
+ * @brief Valida si el usuario ingresa un entero y concede tres intentos para ingresarlo
+ *
+ * @param ret Retorno del scanf
+ * @param number Puntero a entero
+ *
+ * @return Retorna (-1) si hubo un error (puntero NULL o intentos agotados) - (0) si no lo hubo
+ */
+
+int validarEntero(int ret, int* number)
+{
+	int todoOk = 0;
+
+	if(number != NULL)
+	{
+		while(ret != 1)
+		{
+			printf("Ingrese un valor numerico: ");
+			__fpurge(stdin);
+			ret = scanf("%d", number);
+		}
+		if(ret == 1)
+		{
+			todoOk = 1;
+		}
+	}
+	return todoOk;
+}
